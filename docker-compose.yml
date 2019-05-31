@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  lab:
+    build: .
+    volumes:
+     - ./tests:/home/guso/code/tests
+     - ./notebooks:/home/guso/notebooks
+     - ./source:/home/guso/code/source
+     - ./data:/home/guso/data
+     - ./docs:/home/guso/docs
+    ports:
+      - 8888:8888
